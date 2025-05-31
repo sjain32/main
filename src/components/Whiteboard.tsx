@@ -1394,7 +1394,7 @@ export const Whiteboard = forwardRef<fabric.Canvas, WhiteboardProps>(({ initialD
 
             {/* --- Render Cursors for Other Users (MODIFIED) --- */}
             <div>
-                Cursor: {JSON.stringify(myPresence.cursor)}
+                {/* Cursor: {JSON.stringify(myPresence.cursor)} */}
                 {others
                     .filter((other) => other.presence.cursor !== null)
                     .map(({ connectionId, presence }) => (

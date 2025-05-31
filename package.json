@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",  
+    "postinstall": "npx lightningcss-prebuilt install || true"
   },
   "dependencies": {
     "@auth/core": "^0.34.2",
@@ -27,7 +28,7 @@
     "dotenv": "^16.5.0",
     "fabric": "^6.6.5",
     "fabric-with-erasing": "^1.0.1",
-    "lightningcss": "^1.22.0",
+    "lightningcss": "^1.30.1",
     "lucide-react": "^0.511.0",
     "next": "15.3.2",
     "next-auth": "^4.24.11",

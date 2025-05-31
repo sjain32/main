@@ -6,7 +6,6 @@
 
 import { revalidatePath } from 'next/cache'; // Optional: To trigger re-fetching data on the client
 import prismadb from '@/lib/prisma'; // Import the singleton Prisma Client instance
-import { Prisma } from '@prisma/client'; // Import Prisma types if needed for input validation
 import { getServerSession } from 'next-auth/next';
 import { authOptions } from '@/lib/auth';
 import { Cuid } from '@/lib/cuid';
@@ -20,7 +19,7 @@ import type { Session } from 'next-auth';
  * @param boardData - The serialized state of the whiteboard (e.g., Fabric.js canvas JSON). Should be a JSON-serializable value.
  * @returns An object indicating success or failure, potentially with the saved data or an error message.
  */
-export async function saveBoardState(roomId: string, boardData: Prisma.InputJsonValue): Promise<{ success: boolean; error?: string; whiteboard?: unknown }> {
+export async function saveBoardState(roomId: string, boardData: any): Promise<{ success: boolean; error?: string; whiteboard?: unknown }> {
     // Basic validation
     if (!roomId || typeof roomId !== 'string' || roomId.trim() === '') {
         return { success: false, error: 'Invalid Room ID provided.' };

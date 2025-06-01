@@ -1377,7 +1377,7 @@ export const Whiteboard = forwardRef<fabric.Canvas, WhiteboardProps>(({ initialD
     return (
         <main
             ref={canvasContainerRef}
-            className="relative w-full h-full bg-neutral-100 touch-none overflow-hidden"
+            className="relative  w-full h-full bg-neutral-100 touch-none overflow-hidden"
         >
             <canvas ref={canvasRef} id="canvas" />
             <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">

@@ -147,7 +147,7 @@ export const BoardListItem = ({ id, roomId, name, updatedAt }: BoardListItemProp
 
             {/* Action Buttons (only when not editing) */}
             {!isEditing && (
-                <div className="flex items-center gap-x-2 shrink-0 ml-auto sm:ml-4">
+                <div className="flex items-center gap-x-2 shrink-0 text-muted ml-auto sm:ml-4">
                     <Button onClick={enableEditing} size="icon" variant="outline" aria-label="Edit board name" disabled={isDeletePending}>
                         <Pencil className="h-4 w-4 hover:cursor-pointer" />
                     </Button>

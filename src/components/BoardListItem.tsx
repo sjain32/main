@@ -112,7 +112,7 @@ export const BoardListItem = ({ id, roomId, name, updatedAt }: BoardListItemProp
     };
 
     return (
-        <li className="border border-gray-200 p-4 rounded-lg flex flex-col sm:flex-row justify-between items-start sm:items-center gap-y-3 sm:gap-y-0 hover:bg-gray-50 transition-colors">
+        <li className="border border-gray-200 p-4 rounded-lg flex flex-col sm:flex-row justify-between items-start sm:items-center gap-y-3 sm:gap-y-0 hover:cursor-pointer">
             {/* Board Info / Edit Input */}
             <div className="flex-grow flex items-center gap-x-2">
                 {isEditing ? (
@@ -148,7 +148,7 @@ export const BoardListItem = ({ id, roomId, name, updatedAt }: BoardListItemProp
             {/* Action Buttons (only when not editing) */}
             {!isEditing && (
                 <div className="flex items-center gap-x-2 shrink-0 ml-auto sm:ml-4">
-                    <Button onClick={enableEditing} size="icon" variant="ghost" aria-label="Edit board name" disabled={isDeletePending}>
+                    <Button onClick={enableEditing} size="icon" variant="outline" aria-label="Edit board name" disabled={isDeletePending}>
                         <Pencil className="h-4 w-4" />
                     </Button>
 

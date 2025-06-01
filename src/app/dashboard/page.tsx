@@ -40,7 +40,7 @@ export default async function DashboardPage() {
   });
 
   return (
-    <main className="relative bg-black min-h-screen">
+    <main className="relative bg-natural-100 min-h-screen">
       <div className="fixed inset-0 z-0">
         <iframe
             src="https://my.spline.design/jarvis-o0eGHUXqic3DFwfsIlRZgU6a/"

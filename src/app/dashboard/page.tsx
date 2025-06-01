@@ -41,7 +41,7 @@ export default async function DashboardPage() {
 
   return (
     <main className="relative bg-black min-h-screen">
-      <div className="fixed inset-0 -z-10">
+      <div className="fixed inset-0 z-0">
         <iframe
             src="https://my.spline.design/jarvis-o0eGHUXqic3DFwfsIlRZgU6a/"
             frameBorder="0"
@@ -50,7 +50,7 @@ export default async function DashboardPage() {
             allowFullScreen
           ></iframe>
       </div>
-      <div className="container mx-auto px-4 py-8 relative z-10">
+      <div className="container mx-auto px-4 py-8 relative text-white z-10">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold">My Whiteboards</h1>
           <CreateBoardButton />

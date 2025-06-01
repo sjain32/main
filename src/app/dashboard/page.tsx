@@ -5,7 +5,7 @@ import prismadb from "@/lib/prisma";
 import { CreateBoardButton } from "@/components/CreateBoardButton";
 import { BoardListItem } from "@/components/BoardListItem";
 import type { Session } from "next-auth";
-import Squares from "@/components/ui/Squares";
+import Silk from "@/components/ui/Silk";
 interface Board {
   id: string;
   roomId: string;
@@ -43,12 +43,12 @@ export default async function DashboardPage() {
   return (
     <main className="relative min-h-screen">
       <div className="fixed inset-0 -z-10">
-        <Squares
-          speed={0.5}
-          squareSize={40}
-          direction="up" // up, down, left, right, diagonal
-          borderColor="#fff"
-          hoverFillColor="#222"
+        <Silk
+          speed={5}
+          scale={1}
+          color="#7B7481"
+          noiseIntensity={1.5}
+          rotation={0}
         />
       </div>
       <div className="container mx-auto px-4 py-8 relative z-10">

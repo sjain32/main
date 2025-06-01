@@ -112,7 +112,7 @@ export const BoardListItem = ({ id, roomId, name, updatedAt }: BoardListItemProp
     };
 
     return (
-        <li className="border border-gray-200 p-4 rounded-lg flex flex-col sm:flex-row justify-between items-start sm:items-center gap-y-3 sm:gap-y-0 hover:cursor-pointer">
+        <li className="border border-gray-200 p-4 rounded-lg flex flex-col sm:flex-row justify-between items-start sm:items-center gap-y-3 sm:gap-y-0 ">
             {/* Board Info / Edit Input */}
             <div className="flex-grow flex items-center gap-x-2">
                 {isEditing ? (
@@ -149,7 +149,7 @@ export const BoardListItem = ({ id, roomId, name, updatedAt }: BoardListItemProp
             {!isEditing && (
                 <div className="flex items-center gap-x-2 shrink-0 ml-auto sm:ml-4">
                     <Button onClick={enableEditing} size="icon" variant="outline" aria-label="Edit board name" disabled={isDeletePending}>
-                        <Pencil className="h-4 w-4" />
+                        <Pencil className="h-4 w-4 hover:cursor-pointer" />
                     </Button>
 
                     <AlertDialog>
@@ -160,7 +160,7 @@ export const BoardListItem = ({ id, roomId, name, updatedAt }: BoardListItemProp
                                 aria-label="Delete board"
                                 disabled={isDeletePending || isRenamePending}
                             >
-                                {isDeletePending ? <Loader2 className="h-4 w-4 animate-spin"/> : <Trash2 className="h-4 w-4 text-red-500 hover:text-red-700" />}
+                                {isDeletePending ? <Loader2 className="h-4 w-4 animate-spin"/> : <Trash2 className="h-4 w-4 text-red-500 hover:text-red-700 hover:cursor-pointer" />}
                             </Button>
                         </AlertDialogTrigger>
                         <AlertDialogContent>
@@ -185,7 +185,7 @@ export const BoardListItem = ({ id, roomId, name, updatedAt }: BoardListItemProp
                     </AlertDialog>
 
                     <Link href={`/board/${roomId}`} passHref>
-                        <Button variant="outline" size="sm" disabled={isDeletePending}>Open Board</Button>
+                        <Button variant="outline" size="sm" disabled={isDeletePending} className='hover:cursor-pointer'>Open Board</Button>
                     </Link>
                 </div>
             )}

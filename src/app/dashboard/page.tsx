@@ -41,8 +41,8 @@ export default async function DashboardPage() {
   });
 
   return (
-    <main>
-      <div className="absolute z-0">
+    <main className="relative min-h-screen">
+      <div className="fixed inset-0 -z-10">
         <Squares
           speed={0.5}
           squareSize={40}
@@ -51,7 +51,7 @@ export default async function DashboardPage() {
           hoverFillColor="#222"
         />
       </div>
-      <div className="relative z-10 container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 relative z-10">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold">My Whiteboards</h1>
           <CreateBoardButton />

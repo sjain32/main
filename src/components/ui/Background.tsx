@@ -24,7 +24,7 @@ export default function BackgroundWithContent() {
             <div className="relative z-10 flex flex-col h-full  text-white text-center px-4">
                 {/* Logo and Title Section */}
                  
-                <div className='flex flex-col items-center justify-center mt-15 space-y-6'>
+                <div className='flex flex-col items-center justify-center mt-12 space-y-6'>
                     <h1 className="text-9xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text animate-pulse">
                         Scribble Scratch
                     </h1>

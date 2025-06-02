@@ -39,7 +39,7 @@ export default function BackgroundWithContent() {
                 {/* Auth Section */}
                 <div className="mt-17">
                     {!session ? (
-                        <div className='flex mt-9 flex-col items-center space-y-6'>
+                        <div className='flex mt-13 flex-col items-center space-y-6'>
                             <p className='text-2xl font-medium text-gray-300'>
                                 Sign in to get started
                             </p>

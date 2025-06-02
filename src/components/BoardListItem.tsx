@@ -163,7 +163,7 @@ export const BoardListItem = ({ id, roomId, name, updatedAt }: BoardListItemProp
                                 {isDeletePending ? <Loader2 className="h-4 w-4 animate-spin"/> : <Trash2 className="h-4 w-4 text-red-500 hover:text-red-700 hover:cursor-pointer" />}
                             </Button>
                         </AlertDialogTrigger>
-                        <AlertDialogContent>
+                        <AlertDialogContent className='bg-black text-white font-poppins'>
                             <AlertDialogHeader>
                                 <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
                                 <AlertDialogDescription>
